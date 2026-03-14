@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+    <id>1</id>
+    <name>Иван Иванов</name>
+    <email>ivan.ivanov@example.com</email>
+    <skills>
+        <skill>Java</skill>
+        <skill>SQL</skill>
+        <skill>Git</skill>
+    </skills>
+    <relation>
+        <item>
+            <id>2</id>
+            <name>Петр Иванов</name>
+            <status>брат</status>
+        </item>
+        <item>
+            <id>3</id>
+            <name>Анастасия Иванова</name>
+            <status>сестра</status>
+        </item>
+    </relation>
+</person>
