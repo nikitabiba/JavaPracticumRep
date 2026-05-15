@@ -8,14 +8,23 @@ import java.util.Map;
 public class DataProcessingService {
 
     private final Map<String, DataExtractorService> extractors;
+    private final CacheService cacheService;
 
-    public DataProcessingService(Map<String, DataExtractorService> extractors) {
+    public DataProcessingService(Map<String, DataExtractorService> extractors, CacheService cacheService) {
         this.extractors = extractors;
+        this.cacheService = cacheService;
     }
 
     public String extract(String type, String data, String path) {
+        String key = cacheService.buildKey(type, data, path);
+        String cached = cacheService.get(key);
+        if (cached != null) return cached;
+
         DataExtractorService extractor = extractors.get(type);
         if (extractor == null) throw new IllegalArgumentException("Unknown type: " + type);
-        return extractor.extract(data, path);
+
+        String result = extractor.extract(data, path);
+        cacheService.put(key, result);
+        return result;
     }
 }
