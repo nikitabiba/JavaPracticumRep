@@ -1,0 +1,8 @@
+curl -X POST http://localhost:8080/api/data/extract -H "Content-Type: application/json" -d @C:\requests_lab3\json_request.json
+
+curl -X POST http://localhost:8080/api/data/extract -H "Content-Type: application/json" -d @C:\requests_lab3\xml_request.json
+
+curl -X POST http://localhost:8080/api/data/extract -H "Content-Type: application/json" -d @C:\requests_lab3\yaml_request.json
+
+curl -X POST http://localhost:8080/api/data/extract -H "Content-Type: application/json" -d @C:\requests_lab3\error_request.json
+

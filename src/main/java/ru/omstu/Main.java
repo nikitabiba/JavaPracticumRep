@@ -24,23 +24,23 @@ public class Main {
         System.out.println("=== Демо: JSON ===");
         DataProvider json = DataProviderFactory.createByFilename("person.json");
 
-        printResult(json, "person.json", "/name");
-        printResult(json, "person.json", "/email");
-        printResult(json, "person.json", "/skills/[0]");
-        printResult(json, "person.json", "/relation/[0]/name");
+//        printResult(json, "person.json", "/name");
+//        printResult(json, "person.json", "/email");
+//        printResult(json, "person.json", "/skills/[0]");
         printResult(json, "person.json", "/relation/[1]/name");
-        printResult(json, "person.json", "/relation/[1]/status");
+//        printResult(json, "person.json", "/relation/[1]/name");
+//        printResult(json, "person.json", "/relation/[1]/status");
 
         System.out.println();
         System.out.println("=== Демо: XML ===");
         DataProvider xml = DataProviderFactory.createByFilename("person.xml");
 
-        printResult(xml, "person.xml", "/name");
-        printResult(xml, "person.xml", "/email");
-        printResult(xml, "person.xml", "/skills/[0]");
+//        printResult(xml, "person.xml", "/name");
+//        printResult(xml, "person.xml", "/email");
+//        printResult(xml, "person.xml", "/skills/[0]");
         printResult(xml, "person.xml", "/relation/[0]/name");
-        printResult(xml, "person.xml", "/relation/[1]/name");
-        printResult(xml, "person.xml", "/relation/[1]/status");
+//        printResult(xml, "person.xml", "/relation/[1]/name");
+//        printResult(xml, "person.xml", "/relation/[1]/status");
     }
 
     private static void printResult(DataProvider provider, String file, String path) {
