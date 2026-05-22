@@ -1,5 +1,7 @@
 package fitprogwork.service;
 
+import fitprogwork.service.InMemoryCacheService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +16,7 @@ class CacheServiceTest {
     private DataProcessingService processingService;
 
     @Autowired
-    private CacheService cacheService;
+    private InMemoryCacheService cacheService;;
 
     @Test
     void firstCall_missesCache_secondCall_hitsCache() {

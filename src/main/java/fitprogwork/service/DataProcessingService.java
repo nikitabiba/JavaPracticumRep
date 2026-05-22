@@ -8,9 +8,9 @@ import java.util.Map;
 public class DataProcessingService {
 
     private final Map<String, DataExtractorService> extractors;
-    private final CacheService cacheService;
+    private final InMemoryCacheService cacheService;
 
-    public DataProcessingService(Map<String, DataExtractorService> extractors, CacheService cacheService) {
+    public DataProcessingService(Map<String, DataExtractorService> extractors, InMemoryCacheService cacheService) {
         this.extractors = extractors;
         this.cacheService = cacheService;
     }
